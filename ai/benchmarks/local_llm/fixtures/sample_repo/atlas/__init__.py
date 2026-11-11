@@ -1,0 +1,1 @@
+"""Synthetic Atlas application package."""

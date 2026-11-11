@@ -1,0 +1,4891 @@
+{
+  "started_at": "2026-11-01T14:21:23.846409+00:00",
+  "finished_at": "2026-11-01T14:33:18.171605+00:00",
+  "endpoint": "http://localhost:11434",
+  "settings": {
+    "temperature": 0,
+    "seed": 41,
+    "num_ctx": 4096,
+    "num_predict": 128,
+    "repeats": 2,
+    "sequential_models": true
+  },
+  "models": [
+    {
+      "name": "qwen2.5-coder:3b",
+      "digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "size_bytes": 1929912626
+    },
+    {
+      "name": "qwen2.5:7b",
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "size_bytes": 4683087332
+    }
+  ],
+  "cases": 8,
+  "records": [
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:21:23.846483+00:00",
+      "output": "The `AccountCatalog.find` method returns `None` when the specified `account_id` is not found in the `accounts` dictionary. This is because the `get` method of a dictionary returns `None` if the key is not present.",
+      "wall_seconds": 7.108,
+      "ttft_seconds": 6.294,
+      "ollama_total_duration_seconds": 4.9784,
+      "prompt_tokens": 209,
+      "prompt_eval_seconds": 0.137,
+      "generated_tokens": 51,
+      "generation_seconds": 0.7811,
+      "tokens_per_second": 65.295,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 34.4,
+        "host_cpu_pct_mean": 20.7,
+        "host_memory_used_mib_max": 12577,
+        "host_memory_used_mib_mean": 12380.25,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 12,
+        "gpu_utilization_pct_mean": 3.75,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 1553.25,
+        "sample_count": 4
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:21:31.984246+00:00",
+      "output": "The `AccountCatalog.find` method returns `None` when the specified `account_id` is not found in the `accounts` dictionary. This is because the `get` method of a dictionary in Python returns `None` if the key is not present. The evidence for this is found in the `AccountCatalog.find` method implementation at line 14 of `atlas/catalog.py`, where `return self.accounts.get(account_id)` is used.",
+      "wall_seconds": 3.7658,
+      "ttft_seconds": 2.3855,
+      "ollama_total_duration_seconds": 1.5008,
+      "prompt_tokens": 194,
+      "prompt_eval_seconds": 0.0949,
+      "generated_tokens": 92,
+      "generation_seconds": 1.3543,
+      "tokens_per_second": 67.932,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 28.0,
+        "host_cpu_pct_mean": 17.83,
+        "host_memory_used_mib_max": 12499,
+        "host_memory_used_mib_mean": 12405.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 39.33,
+        "gpu_utilization_pct_max": 94,
+        "gpu_utilization_pct_mean": 31.33,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:21:36.865967+00:00",
+      "output": "The `AccountCatalog.find` method returns `None` when the specified `account_id` is not found in the `accounts` dictionary. This is because the `get` method of a dictionary returns `None` if the key is not present.",
+      "wall_seconds": 3.2361,
+      "ttft_seconds": 2.5314,
+      "ollama_total_duration_seconds": 1.0161,
+      "prompt_tokens": 209,
+      "prompt_eval_seconds": 0.2114,
+      "generated_tokens": 51,
+      "generation_seconds": 0.7389,
+      "tokens_per_second": 69.025,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 21.2,
+        "host_cpu_pct_mean": 10.6,
+        "host_memory_used_mib_max": 12372,
+        "host_memory_used_mib_mean": 12368.0,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 47.5,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:21:40.110596+00:00",
+      "output": "The `AccountCatalog.find` method returns `None` when the specified `account_id` is not found in the `accounts` dictionary. This is because the `get` method of a dictionary in Python returns `None` if the key is not present. The evidence for this is found in the `AccountCatalog.find` method implementation at line 14 of `atlas/catalog.py`, where `return self.accounts.get(account_id)` is used.",
+      "wall_seconds": 3.8746,
+      "ttft_seconds": 2.4088,
+      "ollama_total_duration_seconds": 1.6479,
+      "prompt_tokens": 194,
+      "prompt_eval_seconds": 0.1007,
+      "generated_tokens": 92,
+      "generation_seconds": 1.4942,
+      "tokens_per_second": 61.573,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 33.1,
+        "host_cpu_pct_mean": 16.55,
+        "host_memory_used_mib_max": 12386,
+        "host_memory_used_mib_mean": 12342.5,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 92,
+        "gpu_utilization_pct_mean": 46.0,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:21:44.008375+00:00",
+      "output": "The repository is organized into three major modules: `atlas`, `web`, and `java`. The entry point for the `atlas` module is `atlas/billing.py`, which imports necessary libraries and modules from the `atlas.catalog` package.",
+      "wall_seconds": 3.4462,
+      "ttft_seconds": 2.6469,
+      "ollama_total_duration_seconds": 1.2151,
+      "prompt_tokens": 326,
+      "prompt_eval_seconds": 0.3441,
+      "generated_tokens": 54,
+      "generation_seconds": 0.8278,
+      "tokens_per_second": 65.236,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 38.3,
+        "host_cpu_pct_mean": 19.15,
+        "host_memory_used_mib_max": 12468,
+        "host_memory_used_mib_mean": 12466.5,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 47.5,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "atlas/"
+        ],
+        "required_terms_missing": [
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "atlas/"
+        ],
+        "required_terms_missing": [
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:21:47.470022+00:00",
+      "output": "The major modules in the repository are:\n1. Atlas Sample\n2. Billing\n3. Web\n4. Java\n\nThe entry point for the repository is the `README.md` file, which provides an overview of the repository and its structure.",
+      "wall_seconds": 3.3146,
+      "ttft_seconds": 2.608,
+      "ollama_total_duration_seconds": 1.1124,
+      "prompt_tokens": 313,
+      "prompt_eval_seconds": 0.3158,
+      "generated_tokens": 51,
+      "generation_seconds": 0.7451,
+      "tokens_per_second": 68.451,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 26.9,
+        "host_cpu_pct_mean": 13.45,
+        "host_memory_used_mib_max": 12488,
+        "host_memory_used_mib_mean": 12478.0,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 47.5,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.0,
+        "required_terms_found": [],
+        "required_terms_missing": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "README.md"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.0,
+        "required_terms_found": [],
+        "required_terms_missing": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "README.md"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:21:50.803916+00:00",
+      "output": "The repository is organized into three major modules: `atlas`, `web`, and `java`. The entry point for the `atlas` module is `atlas/billing.py`, which imports necessary libraries and modules from the `atlas.catalog` package.",
+      "wall_seconds": 3.2972,
+      "ttft_seconds": 2.3865,
+      "ollama_total_duration_seconds": 1.0575,
+      "prompt_tokens": 326,
+      "prompt_eval_seconds": 0.0578,
+      "generated_tokens": 54,
+      "generation_seconds": 0.9375,
+      "tokens_per_second": 57.599,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 24.8,
+        "host_cpu_pct_mean": 12.4,
+        "host_memory_used_mib_max": 12466,
+        "host_memory_used_mib_mean": 12461.5,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 47.5,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "atlas/"
+        ],
+        "required_terms_missing": [
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "atlas/"
+        ],
+        "required_terms_missing": [
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:21:54.120236+00:00",
+      "output": "The major modules in the repository are:\n1. Atlas Sample\n2. Billing\n3. Web\n4. Java\n\nThe entry point for the repository is the `README.md` file, which provides an overview of the repository and its structure.",
+      "wall_seconds": 3.2691,
+      "ttft_seconds": 2.3858,
+      "ollama_total_duration_seconds": 1.0441,
+      "prompt_tokens": 313,
+      "prompt_eval_seconds": 0.0571,
+      "generated_tokens": 51,
+      "generation_seconds": 0.9223,
+      "tokens_per_second": 55.297,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 24.5,
+        "host_cpu_pct_mean": 12.25,
+        "host_memory_used_mib_max": 12547,
+        "host_memory_used_mib_mean": 12491.0,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 94,
+        "gpu_utilization_pct_mean": 47.0,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.0,
+        "required_terms_found": [],
+        "required_terms_missing": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "README.md"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.0,
+        "required_terms_found": [],
+        "required_terms_missing": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.25,
+        "expected_paths_found": [
+          "README.md"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:21:57.408873+00:00",
+      "output": "ReportService.generate is a method in the ReportService class that takes a 2D array of strings (`rows`) as input and returns a string. It uses the CsvFormatter class to format the rows into a CSV string. The call chain for this method is as follows:\n\n1. ReportService.generate is called with a 2D array of strings as an argument.\n2. Inside ReportService.generate, the CsvFormatter class is instantiated.\n3. The CsvFormatter class's format method is called with the 2D array of strings as an argument.\n4. The format method maps over each row in the 2D array, joining",
+      "wall_seconds": 4.5138,
+      "ttft_seconds": 2.5828,
+      "ollama_total_duration_seconds": 2.2795,
+      "prompt_tokens": 258,
+      "prompt_eval_seconds": 0.296,
+      "generated_tokens": 128,
+      "generation_seconds": 1.9253,
+      "tokens_per_second": 66.482,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 30.7,
+        "host_cpu_pct_mean": 18.27,
+        "host_memory_used_mib_max": 12572,
+        "host_memory_used_mib_mean": 12531.0,
+        "ollama_process_rss_mib_max": 39,
+        "ollama_process_rss_mib_mean": 39.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 31.67,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "ReportService.generate"
+        ],
+        "required_terms_missing": [
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "ReportService.generate"
+        ],
+        "required_terms_missing": [
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:02.419762+00:00",
+      "output": "ReportService.generate is a method in the ReportService class that takes a 2D array of strings (rows) as input and returns a string. It uses the CsvFormatter class to format the rows into a CSV string.\n\nThe call chain for ReportService.generate is as follows:\n\n1. The ReportService class is instantiated with an instance of CsvFormatter.\n2. The generate method is called on the ReportService instance, passing in a 2D array of strings (rows).\n3. The generate method calls the format method on the CsvFormatter instance, passing in the rows array.\n4. The format method maps over each row in the",
+      "wall_seconds": 4.6043,
+      "ttft_seconds": 2.5911,
+      "ollama_total_duration_seconds": 2.3132,
+      "prompt_tokens": 243,
+      "prompt_eval_seconds": 0.2716,
+      "generated_tokens": 128,
+      "generation_seconds": 1.991,
+      "tokens_per_second": 64.289,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 32.6,
+        "host_cpu_pct_mean": 18.3,
+        "host_memory_used_mib_max": 12459,
+        "host_memory_used_mib_mean": 12447.33,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 39.67,
+        "gpu_utilization_pct_max": 92,
+        "gpu_utilization_pct_mean": 35.33,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "ReportService.generate"
+        ],
+        "required_terms_missing": [
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "ReportService.generate"
+        ],
+        "required_terms_missing": [
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:07.413527+00:00",
+      "output": "ReportService.generate is a method in the ReportService class that takes a 2D array of strings (`rows`) as input and returns a string. It uses the CsvFormatter class to format the rows into a CSV string. The call chain for generating a report involves the following steps:\n\n1. The ReportService class is instantiated with an instance of CsvFormatter.\n2. The generate method of ReportService is called with a 2D array of strings (`rows`).\n3. Inside the generate method, the CsvFormatter's format method is called with the `rows` array.\n4. The CsvFormatter's format method maps over each row",
+      "wall_seconds": 4.4745,
+      "ttft_seconds": 2.4437,
+      "ollama_total_duration_seconds": 2.1873,
+      "prompt_tokens": 258,
+      "prompt_eval_seconds": 0.0989,
+      "generated_tokens": 128,
+      "generation_seconds": 2.0226,
+      "tokens_per_second": 63.284,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 27.5,
+        "host_cpu_pct_mean": 17.0,
+        "host_memory_used_mib_max": 12416,
+        "host_memory_used_mib_mean": 12382.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 31.67,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "ReportService.generate"
+        ],
+        "required_terms_missing": [
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.25,
+        "required_terms_found": [
+          "ReportService.generate"
+        ],
+        "required_terms_missing": [
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:12.229158+00:00",
+      "output": "ReportService.generate is a method in the ReportService class that takes a 2D array of strings (rows) as input and returns a string. This method is responsible for generating a CSV formatted string from the input rows.\n\nThe call chain for ReportService.generate is as follows:\n\n1. The method is called with a 2D array of strings as an argument.\n2. Inside the method, the CsvFormatter.format method is invoked with the same 2D array of strings as an argument.\n3. The CsvFormatter.format method processes the input rows by joining each row with a comma and then joining all rows with a newline character.",
+      "wall_seconds": 4.4872,
+      "ttft_seconds": 2.422,
+      "ollama_total_duration_seconds": 2.199,
+      "prompt_tokens": 243,
+      "prompt_eval_seconds": 0.1027,
+      "generated_tokens": 128,
+      "generation_seconds": 2.041,
+      "tokens_per_second": 62.715,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 27.4,
+        "host_cpu_pct_mean": 16.47,
+        "host_memory_used_mib_max": 12286,
+        "host_memory_used_mib_mean": 12277.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 93,
+        "gpu_utilization_pct_mean": 51.33,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:16.934265+00:00",
+      "output": "- **Internal Imports**: `from atlas.catalog import AccountCatalog`\n- **External Imports**: `import json`, `import requests`\n- **Standard Library Imports**: `from dataclasses import dataclass`",
+      "wall_seconds": 3.2288,
+      "ttft_seconds": 2.6647,
+      "ollama_total_duration_seconds": 1.0011,
+      "prompt_tokens": 214,
+      "prompt_eval_seconds": 0.363,
+      "generated_tokens": 41,
+      "generation_seconds": 0.5854,
+      "tokens_per_second": 70.034,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 13.0,
+        "host_cpu_pct_mean": 6.5,
+        "host_memory_used_mib_max": 12255,
+        "host_memory_used_mib_mean": 12253.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 100,
+        "gpu_utilization_pct_mean": 50.0,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:20.171391+00:00",
+      "output": "- **Internal Imports**: \n  - `from atlas.catalog import AccountCatalog`\n  - This is an internal import because it refers to a class `AccountCatalog` defined in the same module `atlas/catalog.py`.\n\n- **External Imports**:\n  - `import json`\n  - `import requests`\n  - These are external imports because they are not defined within the same module. `json` is a standard library module, while `requests` is a third-party library that needs to be installed separately.\n\n- **Standard Library Imports**:\n  - `import json`\n  - This is a standard library import because it is part",
+      "wall_seconds": 4.4792,
+      "ttft_seconds": 2.6282,
+      "ollama_total_duration_seconds": 2.2383,
+      "prompt_tokens": 192,
+      "prompt_eval_seconds": 0.3036,
+      "generated_tokens": 128,
+      "generation_seconds": 1.8843,
+      "tokens_per_second": 67.93,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 20.1,
+        "host_cpu_pct_mean": 12.53,
+        "host_memory_used_mib_max": 12258,
+        "host_memory_used_mib_mean": 12248.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 100,
+        "gpu_utilization_pct_mean": 65.0,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:24.672635+00:00",
+      "output": "- **Internal Imports**: `from atlas.catalog import AccountCatalog`\n- **External Imports**: `import json`, `import requests`\n- **Standard Library Imports**: `from dataclasses import dataclass`",
+      "wall_seconds": 3.0113,
+      "ttft_seconds": 2.3485,
+      "ollama_total_duration_seconds": 0.7989,
+      "prompt_tokens": 214,
+      "prompt_eval_seconds": 0.0596,
+      "generated_tokens": 41,
+      "generation_seconds": 0.6867,
+      "tokens_per_second": 59.71,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 11.8,
+        "host_cpu_pct_mean": 5.9,
+        "host_memory_used_mib_max": 12259,
+        "host_memory_used_mib_mean": 12258.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 47.5,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:27.699458+00:00",
+      "output": "- **Internal Imports**: \n  - `from atlas.catalog import AccountCatalog`\n  - This is an internal import because it refers to a class defined in the same package (`atlas.catalog`).\n\n- **External Imports**:\n  - `import json`\n  - `import requests`\n  - These are external imports because they are not defined within the same package. `json` is a standard library module, while `requests` is a third-party library.\n\n- **Standard Library Imports**:\n  - `import json`\n  - This is a standard library import because it is a built-in module in Python.",
+      "wall_seconds": 4.2815,
+      "ttft_seconds": 2.3369,
+      "ollama_total_duration_seconds": 2.0114,
+      "prompt_tokens": 192,
+      "prompt_eval_seconds": 0.0569,
+      "generated_tokens": 125,
+      "generation_seconds": 1.901,
+      "tokens_per_second": 65.755,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 20.4,
+        "host_cpu_pct_mean": 11.43,
+        "host_memory_used_mib_max": 12272,
+        "host_memory_used_mib_mean": 12265.33,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 62.0,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:32.171445+00:00",
+      "output": "{\n  \"summary\": \"The total_cents function is incorrectly adding the unit_price_cents and quantity, resulting in 253 instead of 750.\",\n  \"likelyRootCause\": \"The function is adding the unit_price_cents and quantity directly, without multiplying the unit_price_cents by the quantity.\",\n  \"suggestedSolution\": \"Modify the function to multiply the unit_price_cents by the quantity before adding it to the quantity.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Incorrect Calculation\",\n      \"",
+      "wall_seconds": 4.5456,
+      "ttft_seconds": 2.6447,
+      "ollama_total_duration_seconds": 2.3388,
+      "prompt_tokens": 293,
+      "prompt_eval_seconds": 0.3619,
+      "generated_tokens": 128,
+      "generation_seconds": 1.9295,
+      "tokens_per_second": 66.339,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 26.6,
+        "host_cpu_pct_mean": 14.5,
+        "host_memory_used_mib_max": 12289,
+        "host_memory_used_mib_mean": 12265.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 100,
+        "gpu_utilization_pct_mean": 65.0,
+        "gpu_memory_used_mib_max": 2155,
+        "gpu_memory_used_mib_mean": 2155.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ],
+          "750"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ],
+          "750"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:36.729690+00:00",
+      "output": "```json\n{\n  \"summary\": \"The total_cents function is incorrectly calculating the total cents.\",\n  \"likelyRootCause\": \"The function is adding the unit price in cents to the quantity, which is not the intended behavior.\",\n  \"suggestedSolution\": \"Modify the function to multiply the unit price in cents by the quantity.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Incorrect Calculation\",\n      \"description\": \"The function `total_cents` is incorrectly calculating the total cents by adding the unit price in cents to",
+      "wall_seconds": 4.3508,
+      "ttft_seconds": 2.503,
+      "ollama_total_duration_seconds": 2.1584,
+      "prompt_tokens": 241,
+      "prompt_eval_seconds": 0.2348,
+      "generated_tokens": 128,
+      "generation_seconds": 1.8704,
+      "tokens_per_second": 68.434,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 18.6,
+        "host_cpu_pct_mean": 11.33,
+        "host_memory_used_mib_max": 12280,
+        "host_memory_used_mib_mean": 12262.33,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 58.33,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2156.33,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:41.126068+00:00",
+      "output": "{\n  \"summary\": \"The total_cents function is incorrectly adding the unit_price_cents and quantity, resulting in 253 instead of 750.\",\n  \"likelyRootCause\": \"The function is adding the unit_price_cents and quantity directly, without multiplying the unit_price_cents by the quantity.\",\n  \"suggestedSolution\": \"Modify the function to multiply the unit_price_cents by the quantity before adding it to the quantity.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Incorrect Calculation\",\n      \"",
+      "wall_seconds": 4.3011,
+      "ttft_seconds": 2.2745,
+      "ollama_total_duration_seconds": 2.084,
+      "prompt_tokens": 293,
+      "prompt_eval_seconds": 0.0565,
+      "generated_tokens": 128,
+      "generation_seconds": 1.9809,
+      "tokens_per_second": 64.618,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 20.4,
+        "host_cpu_pct_mean": 11.13,
+        "host_memory_used_mib_max": 12291,
+        "host_memory_used_mib_mean": 12282.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 37.67,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ],
+          "750"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ],
+          "750"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:45.720258+00:00",
+      "output": "```json\n{\n  \"summary\": \"The total_cents function is incorrectly calculating the total cents.\",\n  \"likelyRootCause\": \"The function is adding the unit price in cents to the quantity, which is not the intended behavior.\",\n  \"suggestedSolution\": \"Modify the function to multiply the unit price in cents by the quantity.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Incorrect Calculation\",\n      \"description\": \"The function `total_cents` is incorrectly calculating the total cents by adding the unit price in cents to",
+      "wall_seconds": 4.4867,
+      "ttft_seconds": 2.4042,
+      "ollama_total_duration_seconds": 2.2544,
+      "prompt_tokens": 241,
+      "prompt_eval_seconds": 0.1013,
+      "generated_tokens": 128,
+      "generation_seconds": 2.0986,
+      "tokens_per_second": 60.993,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 23.6,
+        "host_cpu_pct_mean": 13.47,
+        "host_memory_used_mib_max": 12259,
+        "host_memory_used_mib_mean": 12253.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 99,
+        "gpu_utilization_pct_mean": 64.67,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:50.216925+00:00",
+      "output": "{\n  \"summary\": \"The NullPointerException occurs because the user parameter passed to the welcome method is null, and the getName method of the NamedUser class is called on this null object.\",\n  \"likelyRootCause\": \"The user parameter passed to the welcome method is null.\",\n  \"suggestedSolution\": \"Ensure that the user parameter is not null before calling the getName method.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\", \"E2\"],\n  \"findings\": [\n    {\n      \"title\": \"Null User Parameter\",\n      \"description\": \"The user parameter passed to the welcome method is",
+      "wall_seconds": 4.4545,
+      "ttft_seconds": 2.5456,
+      "ollama_total_duration_seconds": 2.2008,
+      "prompt_tokens": 316,
+      "prompt_eval_seconds": 0.2307,
+      "generated_tokens": 128,
+      "generation_seconds": 1.9128,
+      "tokens_per_second": 66.917,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 23.2,
+        "host_cpu_pct_mean": 15.0,
+        "host_memory_used_mib_max": 12285,
+        "host_memory_used_mib_mean": 12266.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 62.67,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          "getName"
+        ],
+        "required_terms_missing": [
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          "getName"
+        ],
+        "required_terms_missing": [
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:22:54.824943+00:00",
+      "output": "```json\n{\n  \"summary\": \"NullPointerException in WelcomeController.welcome due to null user\",\n  \"likelyRootCause\": \"The user parameter passed to the welcome method is null.\",\n  \"suggestedSolution\": \"Add null checks to ensure the user is not null before using it.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\", \"E2\"],\n  \"findings\": [\n    {\n      \"title\": \"Null User Parameter\",\n      \"description\": \"The user parameter in the welcome method is null.\",\n      \"severity\": \"high\",\n      \"evidenceId\": \"E1",
+      "wall_seconds": 4.517,
+      "ttft_seconds": 2.5503,
+      "ollama_total_duration_seconds": 2.2374,
+      "prompt_tokens": 264,
+      "prompt_eval_seconds": 0.2128,
+      "generated_tokens": 128,
+      "generation_seconds": 1.9634,
+      "tokens_per_second": 65.192,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 28.9,
+        "host_cpu_pct_mean": 16.4,
+        "host_memory_used_mib_max": 12380,
+        "host_memory_used_mib_mean": 12350.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 93,
+        "gpu_utilization_pct_mean": 59.0,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [
+          "getName"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [
+          "getName"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:22:59.633043+00:00",
+      "output": "{\n  \"summary\": \"The NullPointerException occurs because the user parameter passed to the welcome method is null, and the getName method of the NamedUser class is called on this null object.\",\n  \"likelyRootCause\": \"The user parameter is null.\",\n  \"suggestedSolution\": \"Ensure that the user parameter is not null before calling the getName method.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\", \"E2\"],\n  \"findings\": [\n    {\n      \"title\": \"Null User Parameter\",\n      \"description\": \"The user parameter passed to the welcome method is null.\",\n      \"severity",
+      "wall_seconds": 4.5872,
+      "ttft_seconds": 2.4211,
+      "ollama_total_duration_seconds": 2.3616,
+      "prompt_tokens": 316,
+      "prompt_eval_seconds": 0.0701,
+      "generated_tokens": 128,
+      "generation_seconds": 2.2003,
+      "tokens_per_second": 58.173,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 54.5,
+        "host_cpu_pct_mean": 27.25,
+        "host_memory_used_mib_max": 12468,
+        "host_memory_used_mib_mean": 12263.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 92,
+        "gpu_utilization_pct_mean": 46.0,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          "getName"
+        ],
+        "required_terms_missing": [
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          "getName"
+        ],
+        "required_terms_missing": [
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:23:04.239197+00:00",
+      "output": "```json\n{\n  \"summary\": \"NullPointerException in WelcomeController.welcome due to null user\",\n  \"likelyRootCause\": \"The user parameter passed to the welcome method is null.\",\n  \"suggestedSolution\": \"Add null checks to ensure the user is not null before using it.\",\n  \"confidence\": \"medium\",\n  \"supportingEvidence\": [\"E1\", \"E2\"],\n  \"findings\": [\n    {\n      \"title\": \"Null User Check\",\n      \"description\": \"Add a null check to the welcome method to prevent NullPointerException.\",\n      \"severity\": \"high\",\n      \"evidenceId\": \"",
+      "wall_seconds": 4.8096,
+      "ttft_seconds": 2.5472,
+      "ollama_total_duration_seconds": 2.4176,
+      "prompt_tokens": 264,
+      "prompt_eval_seconds": 0.0647,
+      "generated_tokens": 128,
+      "generation_seconds": 2.2345,
+      "tokens_per_second": 57.284,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 71.7,
+        "host_cpu_pct_mean": 35.85,
+        "host_memory_used_mib_max": 13174,
+        "host_memory_used_mib_mean": 13027.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 96,
+        "gpu_utilization_pct_mean": 56.5,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [
+          "getName"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [
+          "getName"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:23:09.152856+00:00",
+      "output": "The Python billing module (`atlas/billing.py`) defines an `InvoiceService` class, which is part of the `atlas.catalog` module. This indicates a dependency between the billing module and the catalog module, where the billing module relies on the catalog module for its functionality.\n\nThe TypeScript report module (`web/report.ts`) exports a `ReportService` class, which uses the `CsvFormatter` class. This shows a dependency between the report module and the formatter module, where the report module depends on the formatter module to format its output.",
+      "wall_seconds": 4.2629,
+      "ttft_seconds": 2.458,
+      "ollama_total_duration_seconds": 2.1043,
+      "prompt_tokens": 212,
+      "prompt_eval_seconds": 0.2727,
+      "generated_tokens": 111,
+      "generation_seconds": 1.8126,
+      "tokens_per_second": 61.239,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 41.7,
+        "host_cpu_pct_mean": 25.17,
+        "host_memory_used_mib_max": 13128,
+        "host_memory_used_mib_mean": 12863.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 96,
+        "gpu_utilization_pct_mean": 32.0,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "InvoiceService",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [
+          "AccountCatalog"
+        ],
+        "expected_path_coverage": 0.667,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "InvoiceService",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [
+          "AccountCatalog"
+        ],
+        "expected_path_coverage": 0.667,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:23:14.473234+00:00",
+      "output": "### Architecture Note: Python Billing/Catalog Relationship\n\n#### Overview\n\nThe `atlas/billing.py` module defines the `InvoiceService` class, which is responsible for handling billing-related operations. This class interacts with the `AccountCatalog` module from the `atlas.catalog` package to manage and retrieve account information necessary for generating invoices.\n\n#### Key Components\n\n1. **InvoiceService Class**:\n   - **Purpose**: Manages billing operations, including generating invoices based on account data.\n   - **Dependencies**:\n     - `AccountCatalog`: Provides access to account information required for invoice generation.\n\n2. **AccountCatalog Module**:",
+      "wall_seconds": 4.6508,
+      "ttft_seconds": 2.5545,
+      "ollama_total_duration_seconds": 2.3745,
+      "prompt_tokens": 228,
+      "prompt_eval_seconds": 0.2483,
+      "generated_tokens": 128,
+      "generation_seconds": 2.0771,
+      "tokens_per_second": 61.624,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 34.3,
+        "host_cpu_pct_mean": 17.67,
+        "host_memory_used_mib_max": 12787,
+        "host_memory_used_mib_mean": 12735.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 94,
+        "gpu_utilization_pct_mean": 31.33,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog"
+        ],
+        "required_terms_missing": [
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.333,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog"
+        ],
+        "required_terms_missing": [
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.333,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:23:19.623301+00:00",
+      "output": "The Python billing module (`atlas/billing.py`) defines an `InvoiceService` class, which is part of the `atlas.catalog` module. This indicates a dependency between the billing and catalog modules, where the billing service relies on the catalog to manage account information.\n\nThe TypeScript report module (`web/report.ts`) exports a `ReportService` class, which uses a `CsvFormatter` class to format CSV data. The `CsvFormatter` class is defined in `web/csvFormatter.ts`, which provides a method `format` to convert a 2D array of strings into a CSV string. This demonstrates a dependency between the report",
+      "wall_seconds": 4.4307,
+      "ttft_seconds": 2.1877,
+      "ollama_total_duration_seconds": 2.3319,
+      "prompt_tokens": 212,
+      "prompt_eval_seconds": 0.1024,
+      "generated_tokens": 128,
+      "generation_seconds": 2.198,
+      "tokens_per_second": 58.234,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 59.1,
+        "host_cpu_pct_mean": 37.4,
+        "host_memory_used_mib_max": 12878,
+        "host_memory_used_mib_mean": 12818.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 94,
+        "gpu_utilization_pct_mean": 31.33,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "InvoiceService",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [
+          "AccountCatalog"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/csvFormatter.ts",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "InvoiceService",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [
+          "AccountCatalog"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/csvFormatter.ts",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:23:25.540083+00:00",
+      "output": "### Architecture Note: Python Billing/Catalog Relationship\n\n#### Overview\n\nThe `atlas/billing.py` module defines the `InvoiceService` class, which is responsible for managing billing-related operations. This class interacts with the `AccountCatalog` module from the `atlas.catalog` package to retrieve account information necessary for generating invoices.\n\n#### Key Components\n\n1. **InvoiceService Class**:\n   - **Purpose**: Manages billing operations, including generating invoices.\n   - **Dependencies**:\n     - `AccountCatalog`: Used to fetch account details required for invoice generation.\n\n2. **AccountCatalog Module**:\n   - **Purpose**: Provides",
+      "wall_seconds": 4.4833,
+      "ttft_seconds": 2.2561,
+      "ollama_total_duration_seconds": 2.4195,
+      "prompt_tokens": 228,
+      "prompt_eval_seconds": 0.1079,
+      "generated_tokens": 128,
+      "generation_seconds": 2.2708,
+      "tokens_per_second": 56.367,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 55.8,
+        "host_cpu_pct_mean": 27.9,
+        "host_memory_used_mib_max": 13040,
+        "host_memory_used_mib_mean": 12918.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 93,
+        "gpu_utilization_pct_mean": 46.5,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 2
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog"
+        ],
+        "required_terms_missing": [
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.333,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog"
+        ],
+        "required_terms_missing": [
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.333,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:23:30.036035+00:00",
+      "output": "To improve `InvoiceService.account_name`, we can add a check to ensure that the `account_id` is valid before attempting to find the account. This will prevent potential errors and improve the robustness of the function. Here's a suggested improvement:\n\n```python\ndef account_name(self, account_id: str) -> str:\n    if not account_id:\n        return \"Invalid account ID\"\n\n    account = self.catalog.find(account_id)\n    return account.display_name if account else \"Unknown\"\n```\n\n**Rationale**: This improvement checks if the `account_id` is empty or `None` before attempting to find the account. If",
+      "wall_seconds": 4.7012,
+      "ttft_seconds": 2.5733,
+      "ollama_total_duration_seconds": 2.4288,
+      "prompt_tokens": 226,
+      "prompt_eval_seconds": 0.2743,
+      "generated_tokens": 128,
+      "generation_seconds": 2.099,
+      "tokens_per_second": 60.982,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 32.5,
+        "host_cpu_pct_mean": 20.8,
+        "host_memory_used_mib_max": 13075,
+        "host_memory_used_mib_mean": 12928.33,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 94,
+        "gpu_utilization_pct_mean": 31.33,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "Unknown",
+          "account"
+        ],
+        "required_terms_missing": [
+          [
+            "missing",
+            "absent",
+            "not found"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "Unknown",
+          "account"
+        ],
+        "required_terms_missing": [
+          [
+            "missing",
+            "absent",
+            "not found"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:23:35.529100+00:00",
+      "output": "**Justification:**\nThe current implementation of `InvoiceService.account_name` is straightforward but could be improved for clarity and potential future enhancements. The method currently returns \"Unknown\" if the account is not found, which is a simple fallback. However, this could be improved by providing a more informative message or handling the case more gracefully.\n\n**Proposed Improvement:**\n```python\n    def account_name(self, account_id: str) -> str:\n        account = self.catalog.find(account_id)\n        if account:\n            return account.display_name\n        else:\n            raise ValueError(f\"Account with ID {account_id} not found\")\n``",
+      "wall_seconds": 4.5246,
+      "ttft_seconds": 2.463,
+      "ollama_total_duration_seconds": 2.4012,
+      "prompt_tokens": 207,
+      "prompt_eval_seconds": 0.3359,
+      "generated_tokens": 128,
+      "generation_seconds": 2.04,
+      "tokens_per_second": 62.746,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 38.3,
+        "host_cpu_pct_mean": 21.07,
+        "host_memory_used_mib_max": 12862,
+        "host_memory_used_mib_mean": 12847.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 31.67,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:23:41.092444+00:00",
+      "output": "To improve `InvoiceService.account_name`, we can add a check to ensure that the account exists before attempting to access its display name. This will prevent potential errors and provide a more robust user experience. Here's the improved code:\n\n```python\n[E2] atlas/billing.py:11-14 (InvoiceService.account_name)\n```\n```\n    def account_name(self, account_id: str) -> str:\n        account = self.catalog.find(account_id)\n        if account:\n            return account.display_name\n        else:\n            return \"Unknown\"\n```\n\n**Rationale**: This change ensures that the method checks if the",
+      "wall_seconds": 4.6834,
+      "ttft_seconds": 2.4096,
+      "ollama_total_duration_seconds": 2.3848,
+      "prompt_tokens": 226,
+      "prompt_eval_seconds": 0.1071,
+      "generated_tokens": 128,
+      "generation_seconds": 2.2125,
+      "tokens_per_second": 57.853,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 29.4,
+        "host_cpu_pct_mean": 17.03,
+        "host_memory_used_mib_max": 12852,
+        "host_memory_used_mib_mean": 12846.0,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 95,
+        "gpu_utilization_pct_mean": 31.67,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "Unknown",
+          "account"
+        ],
+        "required_terms_missing": [
+          [
+            "missing",
+            "absent",
+            "not found"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "Unknown",
+          "account"
+        ],
+        "required_terms_missing": [
+          [
+            "missing",
+            "absent",
+            "not found"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5-coder:3b",
+      "model_digest": "f72c60cabf6237b07f6e632b2c48d533cef25eda2efbd34bed21c5e9c01e6225",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:23:46.397381+00:00",
+      "output": "**Justification:**\nThe current implementation of `InvoiceService.account_name` is straightforward but could be improved for clarity and potential future enhancements. The method currently returns \"Unknown\" if the account is not found, which is a simple fallback. However, this could be improved by providing a more informative message or handling the case differently.\n\n**Proposed Improvement:**\n```python\n    def account_name(self, account_id: str) -> str:\n        account = self.catalog.find(account_id)\n        if account:\n            return account.display_name\n        else:\n            raise ValueError(f\"Account with ID {account_id} not found\")\n```",
+      "wall_seconds": 4.5974,
+      "ttft_seconds": 2.3808,
+      "ollama_total_duration_seconds": 2.3506,
+      "prompt_tokens": 207,
+      "prompt_eval_seconds": 0.0799,
+      "generated_tokens": 128,
+      "generation_seconds": 2.2124,
+      "tokens_per_second": 57.855,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 32.9,
+        "host_cpu_pct_mean": 21.57,
+        "host_memory_used_mib_max": 12857,
+        "host_memory_used_mib_mean": 12847.67,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 40.0,
+        "gpu_utilization_pct_max": 92,
+        "gpu_utilization_pct_mean": 30.67,
+        "gpu_memory_used_mib_max": 2157,
+        "gpu_memory_used_mib_mean": 2157.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:23:55.722728+00:00",
+      "output": "When an account ID is absent, `AccountCatalog.find` returns `None` [E1].",
+      "wall_seconds": 15.376,
+      "ttft_seconds": 12.9704,
+      "ollama_total_duration_seconds": 13.2245,
+      "prompt_tokens": 209,
+      "prompt_eval_seconds": 0.619,
+      "generated_tokens": 21,
+      "generation_seconds": 2.3709,
+      "tokens_per_second": 8.857,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 93.1,
+        "host_cpu_pct_mean": 40.73,
+        "host_memory_used_mib_max": 14880,
+        "host_memory_used_mib_mean": 13435.43,
+        "ollama_process_rss_mib_max": 40,
+        "ollama_process_rss_mib_mean": 38.14,
+        "gpu_utilization_pct_max": 29,
+        "gpu_utilization_pct_mean": 7.86,
+        "gpu_memory_used_mib_max": 2295,
+        "gpu_memory_used_mib_mean": 1518.57,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:24:12.252352+00:00",
+      "output": "The `AccountCatalog.find` method returns `None` when the provided `account_id` is not found in the `accounts` dictionary.\n\nThis behavior is evident from the following line in the `find` method:\n```python\nreturn self.accounts.get(account_id)\n```\nThe `get` method of a dictionary returns `None` if the specified key (`account_id` in this case) is not found in the dictionary. Therefore, if the `account_id` is absent, `find` will return `None`. [E1]",
+      "wall_seconds": 16.2182,
+      "ttft_seconds": 3.1087,
+      "ollama_total_duration_seconds": 13.9672,
+      "prompt_tokens": 194,
+      "prompt_eval_seconds": 0.7714,
+      "generated_tokens": 110,
+      "generation_seconds": 13.1402,
+      "tokens_per_second": 8.371,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 86.4,
+        "host_cpu_pct_mean": 58.12,
+        "host_memory_used_mib_max": 13814,
+        "host_memory_used_mib_mean": 13795.5,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 39,
+        "gpu_utilization_pct_mean": 22.83,
+        "gpu_memory_used_mib_max": 2295,
+        "gpu_memory_used_mib_mean": 2295.0,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:24:28.495676+00:00",
+      "output": "When an account ID is absent, `AccountCatalog.find` returns `None` [E1].",
+      "wall_seconds": 4.9669,
+      "ttft_seconds": 2.5175,
+      "ollama_total_duration_seconds": 2.7012,
+      "prompt_tokens": 209,
+      "prompt_eval_seconds": 0.1896,
+      "generated_tokens": 21,
+      "generation_seconds": 2.4482,
+      "tokens_per_second": 8.578,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 71.0,
+        "host_cpu_pct_mean": 49.23,
+        "host_memory_used_mib_max": 13823,
+        "host_memory_used_mib_mean": 13814.67,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 53,
+        "gpu_utilization_pct_mean": 17.67,
+        "gpu_memory_used_mib_max": 2295,
+        "gpu_memory_used_mib_mean": 2295.0,
+        "sample_count": 3
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "None"
+        ],
+        "required_terms_missing": [
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-explanation",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:24:34.482829+00:00",
+      "output": "The `AccountCatalog.find` method returns `None` when the provided `account_id` is not found in the `accounts` dictionary.\n\nThis behavior is evident from the following line in the `find` method:\n```python\nreturn self.accounts.get(account_id)\n```\nThe `get` method of a dictionary returns `None` if the specified key (`account_id` in this case) is not found in the dictionary. Therefore, if the `account_id` is absent, `find` will return `None`. [E1]",
+      "wall_seconds": 16.6918,
+      "ttft_seconds": 2.556,
+      "ollama_total_duration_seconds": 14.4545,
+      "prompt_tokens": 194,
+      "prompt_eval_seconds": 0.2147,
+      "generated_tokens": 110,
+      "generation_seconds": 14.1753,
+      "tokens_per_second": 7.76,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 86.1,
+        "host_cpu_pct_mean": 58.83,
+        "host_memory_used_mib_max": 13837,
+        "host_memory_used_mib_mean": 13795.67,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 38,
+        "gpu_utilization_pct_mean": 22.33,
+        "gpu_memory_used_mib_max": 2295,
+        "gpu_memory_used_mib_mean": 2295.0,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "None",
+          [
+            "accounts.get",
+            "get(account_id)"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/catalog.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:24:51.185787+00:00",
+      "output": "The major modules identified from the evidence are:\n\n- **Python module**: Located in `atlas/`, containing code for account and billing. The entry point is not explicitly stated, but `billing.py` could be a potential entry point as it imports other modules relevant to the billing functionality [E2].\n\n- **TypeScript module**: Located in `web/`, containing code for report generation. The entry point is not explicitly stated, but `report.ts` could be a potential entry point as it defines a class for report service [E3].\n\n- **Java module**: Located in `java/src/main/java/example/`, containing code for",
+      "wall_seconds": 19.1812,
+      "ttft_seconds": 3.1289,
+      "ollama_total_duration_seconds": 16.962,
+      "prompt_tokens": 326,
+      "prompt_eval_seconds": 0.8457,
+      "generated_tokens": 128,
+      "generation_seconds": 16.0423,
+      "tokens_per_second": 7.979,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 86.5,
+        "host_cpu_pct_mean": 56.7,
+        "host_memory_used_mib_max": 13765,
+        "host_memory_used_mib_mean": 13669.83,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 32,
+        "gpu_utilization_pct_mean": 15.17,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2296.67,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [
+          "billing.py",
+          "report.ts"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 2
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [
+          "billing.py",
+          "report.ts"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 2
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:25:10.960334+00:00",
+      "output": "The major modules identified from the evidence are:\n\n- **Python (atlas/)**: Contains code for account and billing, as indicated by `atlas/billing.py`.\n- **TypeScript (web/)**: Includes report generation, as shown by `web/report.ts`.\n- **Java (java/src/main/java/example/)**: Features user examples, specifically for a `GuestUser` class.\n\nNo explicit entry point is identified in the provided evidence. The snippets suggest that each module has its own starting point, but there is no indication of a single entry point that coordinates the entire application. [E1] mentions the repository structure",
+      "wall_seconds": 17.0825,
+      "ttft_seconds": 3.4032,
+      "ollama_total_duration_seconds": 14.7642,
+      "prompt_tokens": 313,
+      "prompt_eval_seconds": 0.9826,
+      "generated_tokens": 128,
+      "generation_seconds": 13.7123,
+      "tokens_per_second": 9.335,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 85.6,
+        "host_cpu_pct_mean": 65.46,
+        "host_memory_used_mib_max": 15114,
+        "host_memory_used_mib_mean": 13538.29,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 40,
+        "gpu_utilization_pct_mean": 20.0,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.75,
+        "expected_paths_found": [
+          "README.md",
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.75,
+        "expected_paths_found": [
+          "README.md",
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:25:28.639842+00:00",
+      "output": "The repository contains three major modules:\n\n1. **Python Module** - Located in `atlas/` with a file `billing.py` that imports `json`, `requests`, and `AccountCatalog` from `catalog`.\n2. **TypeScript Module** - Located in `web/` with a file `report.ts` that imports `CsvFormatter`.\n3. **Java Module** - Located in `java/src/main/java/example/` with a file `GuestUser.java` that extends `NamedUser`.\n\nNo specific entry point is identified in the evidence provided.",
+      "wall_seconds": 16.3597,
+      "ttft_seconds": 2.5262,
+      "ollama_total_duration_seconds": 14.142,
+      "prompt_tokens": 326,
+      "prompt_eval_seconds": 0.1866,
+      "generated_tokens": 115,
+      "generation_seconds": 13.8883,
+      "tokens_per_second": 8.28,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 93.7,
+        "host_cpu_pct_mean": 58.4,
+        "host_memory_used_mib_max": 13461,
+        "host_memory_used_mib_mean": 13402.67,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 55,
+        "gpu_utilization_pct_mean": 29.17,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/"
+        ],
+        "required_terms_missing": [
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [
+          "GuestUser.java",
+          "billing.py",
+          "report.ts"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 3
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/"
+        ],
+        "required_terms_missing": [
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [
+          "GuestUser.java",
+          "billing.py",
+          "report.ts"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 3
+      }
+    },
+    {
+      "case_id": "repository-understanding",
+      "agent": "repository-explorer",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:25:45.008025+00:00",
+      "output": "The major modules identified from the evidence are:\n\n- **Python (atlas/)**: Contains code for account and billing, as indicated by `atlas/billing.py`.\n- **TypeScript (web/)**: Includes report generation code, as shown by `web/report.ts`.\n- **Java (java/src/main/java/example/)**: Features user examples, specifically for a `GuestUser` class.\n\nNo explicit entry point is identified in the provided evidence. The snippets suggest that each module has its own starting point, but there is no indication of a central entry point that coordinates the interaction between these modules. [E1] mentions",
+      "wall_seconds": 16.9856,
+      "ttft_seconds": 2.6025,
+      "ollama_total_duration_seconds": 14.6828,
+      "prompt_tokens": 313,
+      "prompt_eval_seconds": 0.2243,
+      "generated_tokens": 128,
+      "generation_seconds": 14.3824,
+      "tokens_per_second": 8.9,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 84.2,
+        "host_cpu_pct_mean": 64.44,
+        "host_memory_used_mib_max": 13677,
+        "host_memory_used_mib_mean": 13621.57,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 40,
+        "gpu_utilization_pct_mean": 19.57,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.75,
+        "expected_paths_found": [
+          "README.md",
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas/",
+          "web/",
+          "java/src/main/java/example/",
+          [
+            "not shown",
+            "not explicitly",
+            "no explicit",
+            "not identified",
+            "not stated"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.75,
+        "expected_paths_found": [
+          "README.md",
+          "atlas/billing.py",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:26:02.888170+00:00",
+      "output": "`ReportService.generate` is a method that takes a 2D array of strings `rows` as input and returns a formatted CSV string. It uses the `CsvFormatter.format` method to format the rows [E1]. \n\nThe call chain is as follows:\n1. `ReportService.generate` is called with `rows`.\n2. It calls `this.formatter.format(rows)`, passing the `rows` to `CsvFormatter.format` [E1].\n3. `CsvFormatter.format` processes the `rows` by joining each row with commas and then joining all rows with newlines, returning the formatted CSV string [E",
+      "wall_seconds": 17.032,
+      "ttft_seconds": 3.0741,
+      "ollama_total_duration_seconds": 14.7449,
+      "prompt_tokens": 258,
+      "prompt_eval_seconds": 0.7214,
+      "generated_tokens": 128,
+      "generation_seconds": 13.9622,
+      "tokens_per_second": 9.168,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 85.4,
+        "host_cpu_pct_mean": 59.31,
+        "host_memory_used_mib_max": 13623,
+        "host_memory_used_mib_mean": 13447.43,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 35,
+        "gpu_utilization_pct_mean": 18.29,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:26:20.527036+00:00",
+      "output": "### Description of `ReportService.generate`\n\n**Inputs:**\n- `rows`: A 2D array of strings, where each inner array represents a row in the CSV.\n\n**Control/Data Flow:**\n1. The `ReportService.generate` method is called with the `rows` parameter.\n2. The method calls the `formatter.format(rows)` method, passing the `rows` array to it.\n3. The `formatter.format(rows)` method formats the `rows` array into a CSV string and returns it.\n4. The `ReportService.generate` method returns the formatted CSV string.\n\n**Return Behavior:**\n- Returns a string",
+      "wall_seconds": 17.3555,
+      "ttft_seconds": 3.0195,
+      "ollama_total_duration_seconds": 15.116,
+      "prompt_tokens": 243,
+      "prompt_eval_seconds": 0.7248,
+      "generated_tokens": 128,
+      "generation_seconds": 14.3268,
+      "tokens_per_second": 8.934,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 90.1,
+        "host_cpu_pct_mean": 69.33,
+        "host_memory_used_mib_max": 13555,
+        "host_memory_used_mib_mean": 13489.14,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 29,
+        "gpu_utilization_pct_mean": 16.86,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ]
+        ],
+        "required_terms_missing": [
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ]
+        ],
+        "required_terms_missing": [
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:26:38.801118+00:00",
+      "output": "`ReportService.generate` is a method that takes a 2D array of strings (`rows`) as input and returns a formatted CSV string. It uses the `CsvFormatter.format` method to perform the actual formatting.\n\nThe call chain is as follows:\n1. `ReportService.generate(rows)` is called with a 2D array of strings.\n2. Inside `generate`, the `formatter.format(rows)` method is invoked, passing the same `rows` array to `CsvFormatter.format`.\n3. `CsvFormatter.format` processes the `rows` array by joining each inner array with commas and then joining all the resulting strings with new",
+      "wall_seconds": 19.6767,
+      "ttft_seconds": 2.4781,
+      "ollama_total_duration_seconds": 17.453,
+      "prompt_tokens": 258,
+      "prompt_eval_seconds": 0.1911,
+      "generated_tokens": 128,
+      "generation_seconds": 17.2,
+      "tokens_per_second": 7.442,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 93.1,
+        "host_cpu_pct_mean": 65.47,
+        "host_memory_used_mib_max": 13544,
+        "host_memory_used_mib_mean": 13496.14,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 35,
+        "gpu_utilization_pct_mean": 18.0,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ]
+        ],
+        "required_terms_missing": [
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ],
+          [
+            "comma",
+            "join(\",\")"
+          ]
+        ],
+        "required_terms_missing": [
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "function-class-analysis",
+      "agent": "code-intelligence",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:26:59.316922+00:00",
+      "output": "### Description of `ReportService.generate`\n\n**Inputs:**\n- `rows` (type: `string[][]`): A 2D array of strings representing the rows of data to be formatted.\n\n**Control/Data Flow:**\n1. The `ReportService.generate` method is called with the `rows` parameter.\n2. The method calls the `formatter.format(rows)` method, passing the `rows` parameter.\n3. The `formatter.format(rows)` method formats the rows into a CSV string and returns it.\n4. The `ReportService.generate` method returns the formatted CSV string.\n\n**Return Behavior:**\n- Returns a string",
+      "wall_seconds": 19.2541,
+      "ttft_seconds": 2.5737,
+      "ollama_total_duration_seconds": 16.99,
+      "prompt_tokens": 243,
+      "prompt_eval_seconds": 0.27,
+      "generated_tokens": 128,
+      "generation_seconds": 16.6543,
+      "tokens_per_second": 7.686,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 89.3,
+        "host_cpu_pct_mean": 65.46,
+        "host_memory_used_mib_max": 13580,
+        "host_memory_used_mib_mean": 13549.71,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 36,
+        "gpu_utilization_pct_mean": 18.57,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ]
+        ],
+        "required_terms_missing": [
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "ReportService.generate",
+          [
+            "formatter.format",
+            "formatter.format(rows)"
+          ]
+        ],
+        "required_terms_missing": [
+          [
+            "comma",
+            "join(\",\")"
+          ],
+          [
+            "newline",
+            "line break"
+          ]
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:27:19.748823+00:00",
+      "output": "- **Internal Imports**: `from atlas.catalog import AccountCatalog` [E1]\n- **External Imports**: `import json` [E1], `import requests` [E1]\n- **Standard Library Imports**: `import json` [E1] (part of Python's standard library)",
+      "wall_seconds": 10.0783,
+      "ttft_seconds": 3.0639,
+      "ollama_total_duration_seconds": 7.8574,
+      "prompt_tokens": 214,
+      "prompt_eval_seconds": 0.7811,
+      "generated_tokens": 61,
+      "generation_seconds": 7.0199,
+      "tokens_per_second": 8.69,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 85.7,
+        "host_cpu_pct_mean": 44.85,
+        "host_memory_used_mib_max": 13607,
+        "host_memory_used_mib_mean": 13596.25,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 29,
+        "gpu_utilization_pct_mean": 16.25,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 4
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:27:30.062549+00:00",
+      "output": "For `atlas/billing.py`:\n\n- **External Dependency**: \n  - `requests` is imported from the external package `requests` [E1].\n\n- **Standard Library Import**: \n  - `json` is imported from the Python standard library [E1].\n\n- **Internal Dependency**: \n  - `AccountCatalog` is imported from the internal package `atlas.catalog` [E1].\n\nNo other dependencies or unresolved items are evidenced in the provided code snippet.",
+      "wall_seconds": 15.1337,
+      "ttft_seconds": 3.0707,
+      "ollama_total_duration_seconds": 12.8323,
+      "prompt_tokens": 192,
+      "prompt_eval_seconds": 0.7315,
+      "generated_tokens": 98,
+      "generation_seconds": 12.0386,
+      "tokens_per_second": 8.141,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 92.3,
+        "host_cpu_pct_mean": 61.83,
+        "host_memory_used_mib_max": 13702,
+        "host_memory_used_mib_mean": 13689.0,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 41,
+        "gpu_utilization_pct_mean": 16.67,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:27:46.282397+00:00",
+      "output": "For `atlas/billing.py`:\n\n- **External Imports**:\n  - `json` [E1]: This is a standard library module, not an external package.\n  - `requests` [E1]: This is an external package used for making HTTP requests.\n\n- **Internal Imports**:\n  - `AccountCatalog` from `atlas.catalog` [E1]: This is an internal import from another module within the `atlas` package.\n\nThere are no standard library imports that are not part of the Python standard library itself.",
+      "wall_seconds": 16.4409,
+      "ttft_seconds": 2.6082,
+      "ollama_total_duration_seconds": 14.199,
+      "prompt_tokens": 214,
+      "prompt_eval_seconds": 0.3065,
+      "generated_tokens": 112,
+      "generation_seconds": 13.8308,
+      "tokens_per_second": 8.098,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 89.9,
+        "host_cpu_pct_mean": 61.75,
+        "host_memory_used_mib_max": 13751,
+        "host_memory_used_mib_mean": 13714.67,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 41,
+        "gpu_utilization_pct_mean": 19.5,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "dependency-explanation",
+      "agent": "dependency-analyst",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:28:03.217907+00:00",
+      "output": "### Dependency Analysis for `atlas/billing.py`\n\n#### Imports in `atlas/billing.py`:\n```python\nimport json\nimport requests\n\nfrom atlas.catalog import AccountCatalog\n```\n\n1. **External Dependencies:**\n   - `json` and `requests` are standard library modules, not external dependencies. They are part of Python's standard library.\n\n2. **Internal Dependencies:**\n   - `AccountCatalog` is imported from `atlas.catalog`, indicating an internal dependency within the `atlas` package.\n\n3. **Standard Library Imports:**\n   - `json` and `requests` are standard library modules",
+      "wall_seconds": 15.4168,
+      "ttft_seconds": 2.4962,
+      "ollama_total_duration_seconds": 13.1337,
+      "prompt_tokens": 192,
+      "prompt_eval_seconds": 0.1767,
+      "generated_tokens": 128,
+      "generation_seconds": 12.9025,
+      "tokens_per_second": 9.921,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 72.1,
+        "host_cpu_pct_mean": 48.76,
+        "host_memory_used_mib_max": 13862,
+        "host_memory_used_mib_mean": 13704.43,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 48,
+        "gpu_utilization_pct_mean": 30.0,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "atlas.catalog",
+          "AccountCatalog",
+          "requests",
+          "json"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:28:18.919040+00:00",
+      "output": "{\n  \"summary\": \"The function total_cents is incorrectly implemented, adding the unit_price_cents and quantity instead of multiplying them, leading to incorrect total_cents calculation [E1].\",\n  \"likelyRootCause\": \"The function total_cents is defined to add unit_price_cents and quantity, whereas it should multiply them to calculate the total cost.\",\n  \"suggestedSolution\": \"Modify the function to multiply unit_price_cents by quantity to correctly calculate the total cost.\",\n  \"confidence\": \"high\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\":",
+      "wall_seconds": 15.0009,
+      "ttft_seconds": 3.0622,
+      "ollama_total_duration_seconds": 12.7613,
+      "prompt_tokens": 293,
+      "prompt_eval_seconds": 0.8198,
+      "generated_tokens": 128,
+      "generation_seconds": 11.8879,
+      "tokens_per_second": 10.767,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 66.2,
+        "host_cpu_pct_mean": 45.6,
+        "host_memory_used_mib_max": 14087,
+        "host_memory_used_mib_mean": 13810.43,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 97,
+        "gpu_utilization_pct_mean": 33.71,
+        "gpu_memory_used_mib_max": 2297,
+        "gpu_memory_used_mib_mean": 2297.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:28:34.165067+00:00",
+      "output": "{\n  \"summary\": \"The function `total_cents` is incorrectly implemented, leading to an unexpected result.\",\n  \"likelyRootCause\": \"The function `total_cents` is adding the `unit_price_cents` and `quantity` instead of multiplying them, which is the intended operation to calculate the total cost.\",\n  \"suggestedSolution\": \"Modify the function to multiply `unit_price_cents` by `quantity` to correctly calculate the total cost.\",\n  \"confidence\": \"high\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Incorrect Calculation in",
+      "wall_seconds": 15.4306,
+      "ttft_seconds": 2.992,
+      "ollama_total_duration_seconds": 13.1577,
+      "prompt_tokens": 241,
+      "prompt_eval_seconds": 0.7143,
+      "generated_tokens": 128,
+      "generation_seconds": 12.3869,
+      "tokens_per_second": 10.334,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 76.9,
+        "host_cpu_pct_mean": 49.67,
+        "host_memory_used_mib_max": 13729,
+        "host_memory_used_mib_mean": 13559.71,
+        "ollama_process_rss_mib_max": 37,
+        "ollama_process_rss_mib_mean": 36.86,
+        "gpu_utilization_pct_max": 97,
+        "gpu_utilization_pct_mean": 31.0,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2298.71,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:28:50.141201+00:00",
+      "output": "{\"summary\":\"The function `total_cents` is incorrectly implemented, adding the `unit_price_cents` and `quantity` instead of multiplying them. This results in [E1].\",\"likelyRootCause\":\"The function logic incorrectly adds the unit price cents and quantity instead of multiplying them.\",\"suggestedSolution\":\"Modify the function to correctly calculate the total cents by multiplying `unit_price_cents` and `quantity`.\",\"confidence\":\"low\",\"supportingEvidence\":[\"E1\"],\"findings\":[{\"title\":\"Incorrect Function Logic\",\"description\":\"The `total_cents` function adds `unit_price_cents` and `quantity` instead of multiplying",
+      "wall_seconds": 17.1775,
+      "ttft_seconds": 2.4957,
+      "ollama_total_duration_seconds": 14.9325,
+      "prompt_tokens": 293,
+      "prompt_eval_seconds": 0.1895,
+      "generated_tokens": 128,
+      "generation_seconds": 14.6811,
+      "tokens_per_second": 8.719,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 88.4,
+        "host_cpu_pct_mean": 55.93,
+        "host_memory_used_mib_max": 13473,
+        "host_memory_used_mib_mean": 13393.86,
+        "ollama_process_rss_mib_max": 37,
+        "ollama_process_rss_mib_mean": 37.0,
+        "gpu_utilization_pct_max": 67,
+        "gpu_utilization_pct_mean": 27.86,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "bug-investigation",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:29:07.811502+00:00",
+      "output": "{\n  \"summary\": \"The function `total_cents` is incorrectly implemented, leading to an unexpected result.\",\n  \"likelyRootCause\": \"The function `total_cents` is adding the `unit_price_cents` and `quantity` instead of multiplying them, which is the intended operation to calculate the total cents.\",\n  \"suggestedSolution\": \"Modify the function to multiply `unit_price_cents` by `quantity` to correctly calculate the total cents.\",\n  \"confidence\": \"high\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Incorrect Calculation in",
+      "wall_seconds": 17.5835,
+      "ttft_seconds": 2.54,
+      "ollama_total_duration_seconds": 15.2969,
+      "prompt_tokens": 241,
+      "prompt_eval_seconds": 0.2014,
+      "generated_tokens": 128,
+      "generation_seconds": 15.0345,
+      "tokens_per_second": 8.514,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 89.8,
+        "host_cpu_pct_mean": 60.24,
+        "host_memory_used_mib_max": 13604,
+        "host_memory_used_mib_mean": 13540.86,
+        "ollama_process_rss_mib_max": 37,
+        "ollama_process_rss_mib_mean": 36.14,
+        "gpu_utilization_pct_max": 40,
+        "gpu_utilization_pct_mean": 24.86,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          [
+            "addition",
+            "adding",
+            "add"
+          ],
+          [
+            "multiply",
+            "multiplication",
+            "multiply by"
+          ]
+        ],
+        "required_terms_missing": [
+          "750"
+        ],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:29:26.095596+00:00",
+      "output": "{\n  \"summary\": \"The likely root cause of the NullPointerException is the method welcome receiving a null user object. This is evidenced by [E1] where the welcome method does not perform any null check before using the user object.\",\n  \"likelyRootCause\": \"The welcome method in WelcomeController.java does not handle the case where user is null.\",\n  \"suggestedSolution\": \"Add a null check in the welcome method to handle cases where user might be null.\",\n  \"confidence\": \"low\",\n  \"supportingEvidence\": [\"E1\"],\n  \"findings\": [\n    {\n      \"title\": \"Null user object",
+      "wall_seconds": 16.8967,
+      "ttft_seconds": 2.9505,
+      "ollama_total_duration_seconds": 14.6342,
+      "prompt_tokens": 316,
+      "prompt_eval_seconds": 0.6428,
+      "generated_tokens": 128,
+      "generation_seconds": 13.9311,
+      "tokens_per_second": 9.188,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 91.9,
+        "host_cpu_pct_mean": 58.77,
+        "host_memory_used_mib_max": 13782,
+        "host_memory_used_mib_mean": 13596.0,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 36.0,
+        "gpu_utilization_pct_max": 34,
+        "gpu_utilization_pct_mean": 17.14,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [
+          "getName"
+        ],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [
+          "WelcomeController.java"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.667,
+        "required_terms_found": [
+          "null",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [
+          "getName"
+        ],
+        "expected_path_coverage": 0.5,
+        "expected_paths_found": [
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [
+          "WelcomeController.java"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:29:43.986063+00:00",
+      "output": "{\n  \"summary\": \"The NullPointerException occurs because the welcome method in WelcomeController.java attempts to call the getName method on a null NamedUser object.\",\n  \"likelyRootCause\": \"The NamedUser object passed to the welcome method is null, and the method tries to call getName on this null object, leading to a NullPointerException.\",\n  \"suggestedSolution\": \"Ensure that the NamedUser object passed to the welcome method is not null before calling its getName method. Add a null check in the welcome method.\",\n  \"confidence\": \"high\",\n  \"supportingEvidence\": [\"E1\", \"E2\"],\n  \"findings\":",
+      "wall_seconds": 17.9762,
+      "ttft_seconds": 2.856,
+      "ollama_total_duration_seconds": 15.7426,
+      "prompt_tokens": 264,
+      "prompt_eval_seconds": 0.5871,
+      "generated_tokens": 128,
+      "generation_seconds": 15.085,
+      "tokens_per_second": 8.485,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 91.7,
+        "host_cpu_pct_mean": 63.89,
+        "host_memory_used_mib_max": 13753,
+        "host_memory_used_mib_mean": 13344.43,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 35.29,
+        "gpu_utilization_pct_max": 41,
+        "gpu_utilization_pct_mean": 21.43,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "null",
+          "getName",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [
+          "WelcomeController.java"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "null",
+          "getName",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [
+          "WelcomeController.java"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:30:02.697991+00:00",
+      "output": "{\n  \"summary\": \"The likely root cause of the NullPointerException is the method welcome receiving a null user object. This is because the NamedUser.getName() method is called on the user parameter, and if user is null, a NullPointerException will be thrown [E1, E2].\",\n  \"likelyRootCause\": \"The welcome method is called with a null user parameter, leading to a NullPointerException when getName() is invoked [E1, E2].\",\n  \"suggestedSolution\": \"Ensure that the user parameter passed to the welcome method is not null before invoking its getName() method. Consider adding a null check in the welcome",
+      "wall_seconds": 18.1561,
+      "ttft_seconds": 2.4891,
+      "ollama_total_duration_seconds": 15.8976,
+      "prompt_tokens": 316,
+      "prompt_eval_seconds": 0.184,
+      "generated_tokens": 128,
+      "generation_seconds": 15.651,
+      "tokens_per_second": 8.178,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 92.8,
+        "host_cpu_pct_mean": 66.33,
+        "host_memory_used_mib_max": 13143,
+        "host_memory_used_mib_mean": 13082.14,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 61,
+        "gpu_utilization_pct_mean": 24.43,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "null",
+          "getName",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "null",
+          "getName",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "root-cause-identification",
+      "agent": "bug-investigator",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:30:21.447286+00:00",
+      "output": "{\n  \"summary\": \"The NullPointerException occurs because the welcome method in WelcomeController.java attempts to call the getName method on a null NamedUser object.\",\n  \"likelyRootCause\": \"The NamedUser object passed to the welcome method is null, and the method tries to call getName on this null object.\",\n  \"suggestedSolution\": \"Ensure that the NamedUser object is not null before calling the getName method. Add a null check in the welcome method.\",\n  \"confidence\": \"high\",\n  \"supportingEvidence\": [\"E1\", \"E2\"],\n  \"findings\": [\n    {\n      \"title\": \"Null Object",
+      "wall_seconds": 18.3881,
+      "ttft_seconds": 2.5129,
+      "ollama_total_duration_seconds": 16.132,
+      "prompt_tokens": 264,
+      "prompt_eval_seconds": 0.1837,
+      "generated_tokens": 128,
+      "generation_seconds": 15.8842,
+      "tokens_per_second": 8.058,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 90.3,
+        "host_cpu_pct_mean": 66.1,
+        "host_memory_used_mib_max": 13317,
+        "host_memory_used_mib_mean": 13257.71,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 55,
+        "gpu_utilization_pct_mean": 32.86,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "null",
+          "getName",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [
+          "WelcomeController.java"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "null",
+          "getName",
+          [
+            "guard",
+            "null check",
+            "check for null"
+          ]
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "java/src/main/java/example/NamedUser.java",
+          "java/src/main/java/example/WelcomeController.java"
+        ],
+        "unknown_path_mentions": [
+          "WelcomeController.java"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:30:40.145710+00:00",
+      "output": "The Python `InvoiceService` class in `atlas/billing.py` is closely related to the `AccountCatalog` class from the `atlas.catalog` module. This suggests that `InvoiceService` likely relies on `AccountCatalog` for account-related data, indicating a dependency on catalog information for generating invoices.\n\nIn the TypeScript code, the `ReportService` class in `web/report.ts` depends on the `CsvFormatter` class from `web/csvFormatter.ts`. This relationship implies that `ReportService` uses `CsvFormatter` to format data into CSV strings, which is essential for generating reports in a comma-separated format.",
+      "wall_seconds": 18.556,
+      "ttft_seconds": 3.1404,
+      "ollama_total_duration_seconds": 16.2724,
+      "prompt_tokens": 212,
+      "prompt_eval_seconds": 0.8056,
+      "generated_tokens": 128,
+      "generation_seconds": 15.4104,
+      "tokens_per_second": 8.306,
+      "done_reason": "stop",
+      "telemetry": {
+        "host_cpu_pct_max": 97.1,
+        "host_cpu_pct_mean": 65.33,
+        "host_memory_used_mib_max": 13419,
+        "host_memory_used_mib_mean": 13348.57,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 43,
+        "gpu_utilization_pct_mean": 26.29,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/csvFormatter.ts",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/csvFormatter.ts",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:30:59.381232+00:00",
+      "output": "### Architecture Note\n\nThe provided repository contains two distinct modules: a Python-based billing system and a TypeScript-based reporting system.\n\n#### Python Billing/Catalog Relationship\n\n- **InvoiceService**: This class is defined in `billing.py` and is related to the `AccountCatalog` class from the `catalog` module. The `AccountCatalog` class is likely responsible for managing and providing information about accounts, which could be essential for generating invoices. However, the exact relationship and behavior of `InvoiceService` with `AccountCatalog` are not detailed in the given evidence [E1].\n\n#### TypeScript Report/Formatter Relationship\n\n- **ReportService**: This",
+      "wall_seconds": 18.2702,
+      "ttft_seconds": 3.0822,
+      "ollama_total_duration_seconds": 16.0206,
+      "prompt_tokens": 228,
+      "prompt_eval_seconds": 0.8085,
+      "generated_tokens": 128,
+      "generation_seconds": 15.1575,
+      "tokens_per_second": 8.445,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 93.0,
+        "host_cpu_pct_mean": 65.89,
+        "host_memory_used_mib_max": 13518,
+        "host_memory_used_mib_mean": 13382.57,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 96,
+        "gpu_utilization_pct_mean": 31.43,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog",
+          "ReportService"
+        ],
+        "required_terms_missing": [
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.333,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [
+          "billing.py"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.75,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog",
+          "ReportService"
+        ],
+        "required_terms_missing": [
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.333,
+        "expected_paths_found": [
+          "atlas/billing.py"
+        ],
+        "unknown_path_mentions": [
+          "billing.py"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": true,
+        "unsupported_path_proxy_count": 1
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:31:18.472575+00:00",
+      "output": "The Python `InvoiceService` class in `atlas/billing.py` is closely related to the `AccountCatalog` class from the `atlas.catalog` module. This suggests that `InvoiceService` likely relies on `AccountCatalog` for account-related data, indicating a dependency on catalog information for generating invoices.\n\nIn the TypeScript code, the `ReportService` class in `web/report.ts` depends on the `CsvFormatter` class from `web/csvFormatter.ts`. This relationship implies that `ReportService` uses `CsvFormatter` to format data into CSV strings, which is essential for generating reports in a comma-separated value format.",
+      "wall_seconds": 17.8215,
+      "ttft_seconds": 2.5464,
+      "ollama_total_duration_seconds": 15.605,
+      "prompt_tokens": 212,
+      "prompt_eval_seconds": 0.2748,
+      "generated_tokens": 128,
+      "generation_seconds": 15.2677,
+      "tokens_per_second": 8.384,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 92.4,
+        "host_cpu_pct_mean": 69.99,
+        "host_memory_used_mib_max": 13238,
+        "host_memory_used_mib_mean": 13125.43,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 39,
+        "gpu_utilization_pct_mean": 19.71,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/csvFormatter.ts",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog",
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 1.0,
+        "expected_paths_found": [
+          "atlas/billing.py",
+          "web/csvFormatter.ts",
+          "web/report.ts"
+        ],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "technical-documentation",
+      "agent": "documentation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:31:37.463517+00:00",
+      "output": "### Architecture Note\n\nThe provided repository contains two distinct modules: a Python-based billing system and a TypeScript-based reporting system.\n\n#### Python Billing System\n\n- **InvoiceService**: This class is defined in `billing.py` and is related to the `AccountCatalog` from the `catalog` module. The `InvoiceService` class is likely responsible for generating invoices based on account information provided by the `AccountCatalog`.\n\n  **Evidence**: \n  ```python\n  from atlas.catalog import AccountCatalog\n\n  class InvoiceService:\n  ```\n\n  **Relationship**: The `InvoiceService` class interacts with the `AccountCatalog` to retrieve necessary account",
+      "wall_seconds": 19.656,
+      "ttft_seconds": 2.3683,
+      "ollama_total_duration_seconds": 17.5697,
+      "prompt_tokens": 228,
+      "prompt_eval_seconds": 0.191,
+      "generated_tokens": 128,
+      "generation_seconds": 17.3462,
+      "tokens_per_second": 7.379,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 98.3,
+        "host_cpu_pct_mean": 71.12,
+        "host_memory_used_mib_max": 13836,
+        "host_memory_used_mib_mean": 13271.83,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 40,
+        "gpu_utilization_pct_mean": 24.0,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 6
+      },
+      "checks": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog"
+        ],
+        "required_terms_missing": [
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [
+          "billing.py"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 1
+      },
+      "checks_v2": {
+        "required_term_coverage": 0.5,
+        "required_terms_found": [
+          "InvoiceService",
+          "AccountCatalog"
+        ],
+        "required_terms_missing": [
+          "ReportService",
+          "CsvFormatter"
+        ],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [
+          "billing.py"
+        ],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 1
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:31:57.128926+00:00",
+      "output": "One possible improvement is to add a docstring to the `account_name` method to clarify its purpose and parameters. This enhances code readability and maintainability.\n\n```python\ndef account_name(self, account_id: str) -> str:\n    \"\"\"\n    Returns the display name of the account with the given ID.\n    If the account is not found, returns \"Unknown\".\n\n    :param account_id: The ID of the account to look up.\n    :return: The display name of the account or \"Unknown\" if not found.\n    \"\"\"\n    account = self.catalog.find(account_id)\n    return account.display_name if account else \"Unknown",
+      "wall_seconds": 19.0177,
+      "ttft_seconds": 3.1417,
+      "ollama_total_duration_seconds": 16.7475,
+      "prompt_tokens": 226,
+      "prompt_eval_seconds": 0.8056,
+      "generated_tokens": 128,
+      "generation_seconds": 15.8779,
+      "tokens_per_second": 8.062,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 96.8,
+        "host_cpu_pct_mean": 79.77,
+        "host_memory_used_mib_max": 13965,
+        "host_memory_used_mib_mean": 13895.29,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 45,
+        "gpu_utilization_pct_mean": 19.0,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 1,
+      "timestamp": "2026-11-01T14:32:17.170881+00:00",
+      "output": "The current implementation of `InvoiceService.account_name` returns \"Unknown\" when the account is not found. While this is a valid fallback, it might be more informative to return a more descriptive message indicating that the account was not found. For example:\n\n```python\ndef account_name(self, account_id: str) -> str:\n    account = self.catalog.find(account_id)\n    return f\"Account {account_id} not found\" if account is None else account.display_name\n```\n\nThis change provides a clearer indication of why \"Unknown\" is returned, which can be helpful for debugging or logging purposes. There is no significant trade-off",
+      "wall_seconds": 18.3837,
+      "ttft_seconds": 3.1352,
+      "ollama_total_duration_seconds": 16.1254,
+      "prompt_tokens": 207,
+      "prompt_eval_seconds": 0.8007,
+      "generated_tokens": 128,
+      "generation_seconds": 15.2611,
+      "tokens_per_second": 8.387,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 94.7,
+        "host_cpu_pct_mean": 69.71,
+        "host_memory_used_mib_max": 13868,
+        "host_memory_used_mib_mean": 13591.71,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 39,
+        "gpu_utilization_pct_mean": 18.71,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "production",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:32:36.405229+00:00",
+      "output": "One possible improvement is to add a docstring to the `account_name` method to clarify its purpose and parameters. This enhances code readability and maintainability.\n\n```python\ndef account_name(self, account_id: str) -> str:\n    \"\"\"\n    Returns the display name of the account with the given ID.\n    If the account is not found, returns \"Unknown\".\n\n    :param account_id: The ID of the account to look up.\n    :return: The display name of the account or \"Unknown\" if not found.\n    \"\"\"\n    account = self.catalog.find(account_id)\n    return account.display_name if account else \"Unknown",
+      "wall_seconds": 17.5306,
+      "ttft_seconds": 2.6084,
+      "ollama_total_duration_seconds": 15.2619,
+      "prompt_tokens": 226,
+      "prompt_eval_seconds": 0.2694,
+      "generated_tokens": 128,
+      "generation_seconds": 14.9254,
+      "tokens_per_second": 8.576,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 93.3,
+        "host_cpu_pct_mean": 70.43,
+        "host_memory_used_mib_max": 13656,
+        "host_memory_used_mib_mean": 13548.29,
+        "ollama_process_rss_mib_max": 35,
+        "ollama_process_rss_mib_mean": 35.0,
+        "gpu_utilization_pct_max": 40,
+        "gpu_utilization_pct_mean": 19.29,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    },
+    {
+      "case_id": "code-recommendation",
+      "agent": "code-recommendation",
+      "model": "qwen2.5:7b",
+      "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "prompt_version": "structured",
+      "repeat": 2,
+      "timestamp": "2026-11-01T14:32:54.997794+00:00",
+      "output": "The current implementation of `InvoiceService.account_name` returns \"Unknown\" when an account is not found. While this is a valid fallback, it might be more informative to return a more descriptive message indicating that the account was not found. For example:\n\n```python\ndef account_name(self, account_id: str) -> str:\n    account = self.catalog.find(account_id)\n    return account.display_name if account else \"Account not found\"\n```\n\nThis change provides clearer feedback, which can be helpful for debugging or understanding the state of the system. There is no significant trade-off in terms of performance or complexity, but it enhances the usability",
+      "wall_seconds": 18.2382,
+      "ttft_seconds": 2.7006,
+      "ollama_total_duration_seconds": 15.9484,
+      "prompt_tokens": 207,
+      "prompt_eval_seconds": 0.3204,
+      "generated_tokens": 128,
+      "generation_seconds": 15.5282,
+      "tokens_per_second": 8.243,
+      "done_reason": "length",
+      "telemetry": {
+        "host_cpu_pct_max": 93.4,
+        "host_cpu_pct_mean": 68.86,
+        "host_memory_used_mib_max": 13908,
+        "host_memory_used_mib_mean": 13743.14,
+        "ollama_process_rss_mib_max": 36,
+        "ollama_process_rss_mib_mean": 35.86,
+        "gpu_utilization_pct_max": 38,
+        "gpu_utilization_pct_mean": 19.57,
+        "gpu_memory_used_mib_max": 2299,
+        "gpu_memory_used_mib_mean": 2299.0,
+        "sample_count": 7
+      },
+      "checks": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      },
+      "checks_v2": {
+        "required_term_coverage": 1.0,
+        "required_terms_found": [
+          "Unknown",
+          [
+            "missing",
+            "absent",
+            "not found"
+          ],
+          "account"
+        ],
+        "required_terms_missing": [],
+        "expected_path_coverage": 0.0,
+        "expected_paths_found": [],
+        "unknown_path_mentions": [],
+        "forbidden_path_mentions": [],
+        "has_evidence_id_citation": false,
+        "unsupported_path_proxy_count": 0
+      }
+    }
+  ],
+  "evaluation_version": "grouped-required-concepts-plus-evidence-reference-path-credit-v2"
+}
